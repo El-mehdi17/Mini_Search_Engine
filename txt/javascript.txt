@@ -1,0 +1,20 @@
+JavaScript et Python sont deux langages de programmation très utilisés.  
+Ils permettent de créer des applications et de résoudre des problèmes.  
+JavaScript est surtout connu pour le développement web.  
+Il rend les pages interactives et dynamiques dans les navigateurs.  
+Python est apprécié pour sa syntaxe simple et facile à lire.  
+On l’utilise dans la science, l’intelligence artificielle et l’automatisation.  
+Ces deux langages peuvent être utilisés dans un même projet.  
+Par exemple, JavaScript peut gérer l’interface d’un site web.  
+Python peut alors s’occuper du serveur et des données.  
+Le navigateur envoie des requêtes au serveur.  
+Le serveur peut être programmé en Python.  
+Il traite les requêtes et renvoie des réponses.  
+JavaScript affiche ensuite ces réponses à l’utilisateur.  
+Les deux langages communiquent souvent grâce à des API.  
+Une API définit la manière dont les programmes échangent des informations.  
+Les données échangées sont souvent au format JSON.  
+JavaScript et Python possèdent chacun de nombreuses bibliothèques.  
+Ces outils facilitent la création de fonctionnalités variées.  
+Le choix dépend des besoins et des objectifs du projet.  
+Ensemble, ils forment une combinaison efficace pour le développement web.

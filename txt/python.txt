@@ -1,0 +1,50 @@
+Python peut renforcer un système JavaScript qui fait fonctionner une intelligence artificielle sur le Web.  
+Dans cette combinaison, chaque langage joue un rôle complémentaire.  
+JavaScript s’occupe principalement de la partie visible par l’utilisateur.  
+Il crée les pages, les boutons et les animations du site.  
+Il permet aussi à l’utilisateur d’envoyer des questions à l’IA.  
+Python, de son côté, peut faire fonctionner la logique du serveur.  
+Il reçoit les demandes envoyées par l’application JavaScript.  
+Il peut ensuite préparer les données nécessaires au traitement.  
+Par exemple, il peut vérifier qu’une question est correctement formulée.  
+Il peut également organiser les informations envoyées par l’utilisateur.  
+Python possède de nombreuses bibliothèques utiles pour l’intelligence artificielle.  
+Certaines servent à analyser du texte ou des images.  
+D’autres permettent d’entraîner ou d’utiliser des modèles d’apprentissage automatique.  
+Le navigateur ne lance généralement pas directement tout le modèle d’IA.  
+Il envoie plutôt une requête à un serveur qui exécute le traitement.  
+Ce serveur peut être développé avec Python.  
+JavaScript communique avec lui à l’aide d’une API.  
+Une API définit comment les deux parties échangent des informations.  
+La question peut être envoyée au serveur au format JSON.  
+Python reçoit alors cette question et la transmet au modèle approprié.  
+Le modèle analyse les données et produit une réponse.  
+Python peut vérifier et formater cette réponse avant de la renvoyer.  
+JavaScript reçoit ensuite le résultat sur la page Web.  
+Il l’affiche à l’utilisateur sans recharger toute la page.  
+Cette organisation sépare clairement l’interface et le traitement de l’IA.  
+Elle rend le système plus facile à comprendre et à maintenir.  
+Les développeurs peuvent modifier l’interface sans changer le modèle.  
+Ils peuvent aussi améliorer le modèle sans reconstruire tout le site.  
+Python facilite l’accès à des outils spécialisés en apprentissage automatique.  
+JavaScript facilite la création d’une expérience interactive dans le navigateur.  
+Ensemble, ils permettent de construire des applications Web intelligentes.  
+Un assistant virtuel est un exemple courant de cette architecture.  
+JavaScript affiche la fenêtre de discussion et les messages.  
+Python traite les questions et prépare les réponses de l’assistant.  
+Une application de traduction peut suivre le même principe.  
+JavaScript présente les champs de texte et les commandes.  
+Python peut analyser le texte et demander une traduction au modèle.  
+Pour les images, JavaScript peut permettre leur téléversement depuis le navigateur.  
+Python peut ensuite analyser ces images à l’aide d’un modèle adapté.  
+Il est important de protéger les données envoyées au serveur.  
+Les clés secrètes et les identifiants doivent rester côté serveur.  
+Python peut également contrôler les demandes pour éviter les abus.  
+Des limites de requêtes aident à protéger les ressources du système.  
+La communication doit être sécurisée, notamment avec HTTPS.  
+Le serveur doit pouvoir gérer plusieurs demandes en même temps.  
+La mise en cache peut accélérer les réponses pour certaines opérations.  
+Les journaux techniques aident à repérer les erreurs et les ralentissements.  
+Les tests vérifient que JavaScript et Python échangent correctement.  
+Ainsi, Python renforce le traitement de l’IA derrière l’application.  
+JavaScript rend cette intelligence accessible et agréable à utiliser sur le Web.
