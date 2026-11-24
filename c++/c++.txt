@@ -1,0 +1,49 @@
+Le C++ est un langage de programmation puissant et polyvalent.
+Il a été créé par Bjarne Stroustrup dans les années 1980.
+Le C++ est une extension du langage C.
+Il permet de développer des applications performantes.
+Le programme C++ commence généralement par la fonction main().
+La bibliothèque iostream est souvent utilisée pour les entrées et sorties.
+L'instruction cout permet d'afficher du texte à l'écran.
+L'instruction cin permet de lire les données saisies par l'utilisateur.
+Chaque instruction se termine par un point-virgule.
+Les variables servent à stocker des données.
+Le type int est utilisé pour les nombres entiers.
+Le type float est utilisé pour les nombres décimaux.
+Le type double offre une meilleure précision.
+Le type char représente un caractère.
+Le type string représente une chaîne de caractères.
+Les commentaires facilitent la compréhension du code.
+Les commentaires sur une ligne utilisent //.
+Les commentaires sur plusieurs lignes utilisent /* */.
+Les opérateurs arithmétiques permettent de faire des calculs.
+L'addition utilise le symbole +.
+La soustraction utilise le symbole -.
+La multiplication utilise le symbole *.
+La division utilise le symbole /.
+Les conditions utilisent souvent l'instruction if.
+L'instruction else permet de gérer un autre cas.
+Les boucles permettent de répéter des actions.
+La boucle for est utilisée quand le nombre d'itérations est connu.
+La boucle while répète une action tant qu'une condition est vraie.
+Les fonctions permettent de réutiliser du code.
+Une fonction peut recevoir des paramètres.
+Une fonction peut retourner une valeur.
+Les tableaux permettent de stocker plusieurs valeurs.
+Chaque élément d'un tableau possède un indice.
+Les pointeurs sont une notion importante en C++.
+Ils stockent l'adresse mémoire d'une variable.
+Les classes sont la base de la programmation orientée objet.
+Une classe définit les propriétés et les comportements d'un objet.
+Un objet est une instance d'une classe.
+L'encapsulation permet de protéger les données.
+L'héritage permet de réutiliser du code entre classes.
+Le polymorphisme augmente la flexibilité des programmes.
+Les fichiers peuvent être manipulés avec fstream.
+Les exceptions permettent de gérer les erreurs.
+Le compilateur traduit le code source en langage machine.
+Le débogage aide à corriger les erreurs.
+Le C++ est utilisé dans les jeux vidéo.
+Il est également utilisé pour les systèmes embarqués.
+De nombreuses applications performantes sont développées en C++.
+Maîtriser les bases du C++ est une étape importante pour devenir développeur.

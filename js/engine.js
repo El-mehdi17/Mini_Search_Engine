@@ -1,79 +1,82 @@
 let path=require("path")
 let fs=require("fs")
-const { ifError } = require("assert")
-const { devNull } = require("os")
+const os = require("os")
+
+console.log("----------------------------------")
+console.log("                                   ")
+console.log("        Mini_Search_Engine         ")
+console.log("                                   ")
+console.log("----------------------------------")
 
 
-
-// le role de cette exercie et trouve python.txt
-/*
---1  cherche dans mon dossier et aprés apprend Comprendre le fonctionnement du code
- me permet de développer un code qui effectue une recherche dans l'ensemble de l'ordinateur. 
--- 2 cherche dans le dossier sur les filles fini à ".txt" .
--- 3 cherche dans cette les files sur le mot de cherche2 .
-*/
-
-
-
-function FindFile() {
-    const files = [];
-
-    console.log("--------------------");
-    console.log("       engine       ");
-    console.log("--------------------");
-
-    const parentDir = path.dirname(__dirname);
-
-    const entries = fs.readdirSync(parentDir);
-
-    entries.forEach((folder) => {
-
-        const fullPath = path.join(parentDir, folder);
-
-        if (fs.statSync(fullPath).isDirectory()) {
-
-            const insideFiles = fs.readdirSync(fullPath);
-
-            insideFiles.forEach((file) => {
-
-                if (path.extname(file) === ".txt") {
-
-                    files.push(
-                        path.join(fullPath, file)
-                    );
-                }
-
-            });
-
-        }
-
-    });
-
-    return files;
+function findTxtFiles(rootdir){
+    
+    let out=[];
+    let walk=(dir)=>{
+      let entries;
+      try{entries=fs.readdirSync(dir,{withFileTypes:true});}
+      catch(err){
+         console.error(`Cannot access ${dir}: ${err.message}`);
+    return;
 }
-
-
-
-
-
- function chercher_sur_mot(mot){
-
-let arr=FindFile()
-
-arr.map((x)=>{
-    let regex=new RegExp(`\\b${mot}\\b`,"ig")
-   let b= fs.readFileSync(x,"utf-8")
-   let resulta=b.match(regex)
-   let nombre=resulta?resulta.length:0
-   console.log(path.basename(x)," : ",nombre)
-   
-})
+      for(const e of entries){
+         const full=path.join(dir,e.name);
+         if(e.isDirectory()){
+            walk(full)  
+         }
+         else if(e.isFile()&&path.extname(e.name).toLowerCase()===".txt"){
+             out.push(full)
+         }
+      }
+    }
+    walk(rootdir)
+    return out
 
 }
+let dossier = path.join(os.homedir(), "Desktop", "tlscontact");
 
-module.exports=chercher_sur_mot
+let arr = findTxtFiles(dossier);
+let myMap=new Map()
+
+arr.forEach(ele => {
+    try {
+        myMap.set(ele, fs.readFileSync(ele, "utf-8"));
+    } catch (err) {
+        console.error(`Cannot read ${ele}: ${err.message}`);
+    }
+});
 
 
+let search=(word)=>{
+     let motTrim=(word||"").trim()
+       if (!motTrim) {
+        console.log("Please enter a search word.");
+        return;
+    }
+     const escaped = motTrim.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+     const regex =new RegExp(`(?<![\\p{L}\\p{N}_])${escaped}(?![\\p{L}\\p{N}_])`, "giu");
+     let count=0
+     let cou=0
+for (const [file, content] of myMap) {
+    let resulta = content.match(regex);
+    let nombre = resulta ? resulta.length : 0;
 
+    if (nombre > 0) {
+        count++;
+        cou += nombre;
 
+        console.log(path.basename(file), ":", nombre);
+    }
+}
+console.log(`\nTotal: ${cou} matches in ${count} of ${myMap.size} files.`);
+
+}
+
+if(require.main===module){
+     const word = process.argv[2] || "python";
+    search(word);
+  
+
+}
+module.exports={search}
 
